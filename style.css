@@ -1,0 +1,60 @@
+#messageForm {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0px 10px 10px 10px;
+  white-space: nowrap;
+  resize: none;
+  box-sizing: border-box;
+}
+
+#messageContainer {
+  position: fixed;
+  border: 1px solid black;
+  overflow: scroll;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 100px;
+  margin: 10px 10px 0px 10px;
+  background-color: aquamarine;
+}
+
+#messageList {
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+li {
+  display: inline;
+  float: right;
+  clear: both;
+  max-width: 40%;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+#messageInput,
+#sendButton {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+#messageInput {
+  min-height: 50px;
+  width: calc(100% - 100px);
+  min-width: 100px;
+  max-width: calc(100% - 100px);
+  resize: none;
+}
+
+#sendButton {
+  height: 50px;
+  width: 80px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
