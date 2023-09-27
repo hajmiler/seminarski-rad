@@ -45,9 +45,8 @@ drone.on("open", (error) => {
   });
 
   room.on("data", (message, member) => {
-    console.log(member.clientData.name);
     if (member) {
-      putMessageToList(message, member.clientData.name);
+      putMessageToList(message, member);
     } else {
       // Message is from server
     }
@@ -254,11 +253,13 @@ function sendMessage(event) {
 }
 
 function createMessageListElement(message, member) {
+  const { name, color } = member.clientData;
   const messageListElement = document.createElement("li");
   const nameElement = document.createElement("p");
   const messageElement = document.createElement("p");
-  nameElement.innerText = member;
+  nameElement.innerText = name;
   messageElement.innerText = message;
+  messageElement.style.backgroundColor = color;
   messageListElement.append(nameElement, messageElement);
   return messageListElement;
 }
