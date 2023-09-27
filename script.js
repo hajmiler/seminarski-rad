@@ -283,7 +283,9 @@ const updateMembersList = () => {
 };
 
 const createMembersListElement = (member) => {
+  const { name, color } = member.clientData;
   const membersListElement = document.createElement("li");
-  membersListElement.innerText = member.clientData.name;
+  membersListElement.innerText = name;
+  membersListElement.style.color = color;
   return membersListElement;
 };
