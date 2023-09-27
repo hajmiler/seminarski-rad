@@ -275,11 +275,14 @@ function putMessageToList(message, member) {
 }
 
 const updateMembersList = () => {
-  console.log(members);
   membersList.innerHTML = "";
   members.map((member) => {
-    const membersListElement = document.createElement("li");
-    membersListElement.innerText = member.clientData.name;
-    membersList.appendChild(membersListElement);
+    membersList.appendChild(createMembersListElement(member));
   });
+};
+
+const createMembersListElement = (member) => {
+  const membersListElement = document.createElement("li");
+  membersListElement.innerText = member.clientData.name;
+  return membersListElement;
 };
