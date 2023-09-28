@@ -26,23 +26,27 @@
 #messageList {
   list-style-type: none;
   margin-right: 20px;
+  /* max-width: 40%; */
+  /* float: right; */
+  /* margin-left: auto; */
 }
 
 #messageList li {
-  display: inline;
-  float: right;
   clear: both;
-  max-width: 40%;
   margin-bottom: 20px;
-  word-wrap: break-word;
 }
 
 #messageList li p:first-child {
   text-align: right;
+  overflow-wrap: break-word;
 }
 
 #messageList li p:nth-child(2) {
+  float: right;
   text-align: left;
+  overflow-wrap: break-word;
+  padding: 10px;
+  border-radius: 20% 5% 20% 5%;
 }
 
 #messageInput,
@@ -70,7 +74,7 @@
   position: fixed;
   border: 1px solid black;
   overflow: scroll;
-  top: 0;
+  top: 100px;
   right: 0;
   left: 90%;
   bottom: 0;
@@ -82,4 +86,28 @@
   list-style-type: none;
   padding: 5px;
   text-align: left;
+}
+
+#nameContainer {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  left: 90%;
+  /* bottom: 85%; */
+}
+
+#nameContainer input {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid black;
+  top: 10px;
+  min-height: 40px;
+  width: 100%;
+}
+
+#nameContainer button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  min-height: 40px;
 }
