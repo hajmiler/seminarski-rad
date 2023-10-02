@@ -5,6 +5,7 @@ const messageContainer = document.getElementById("messageContainer");
 const messageList = document.getElementById("messageList");
 const nameButton = document.getElementById("nameButton");
 const nameInput = document.getElementById("nameInput");
+const nameContainer = document.getElementById("nameContainer");
 let username;
 
 const drone = new ScaleDrone(CLIENT_ID);
@@ -58,6 +59,7 @@ function setName(event) {
   }
   nameInput.value = "";
   username = name;
+  nameContainer.style.display = "none";
 }
 
 function adjustSize() {
