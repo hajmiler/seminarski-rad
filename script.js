@@ -6,6 +6,7 @@ const messageList = document.getElementById("messageList");
 const nameButton = document.getElementById("nameButton");
 const nameInput = document.getElementById("nameInput");
 const nameContainer = document.getElementById("nameContainer");
+const messageForm = document.getElementById("messageForm");
 let username;
 
 const drone = new ScaleDrone(CLIENT_ID);
@@ -54,12 +55,14 @@ function setName(event) {
   event.preventDefault();
   const name = nameInput.value;
   console.log(name);
-  if (name === "") {
+  if (name === "" || typeof name === "undefined") {
     alert("Enter your name");
+  } else {
+    nameInput.value = "";
+    username = name;
+    nameContainer.style.display = "none";
+    messageForm.style.display = "block";
   }
-  nameInput.value = "";
-  username = name;
-  nameContainer.style.display = "none";
 }
 
 function adjustSize() {

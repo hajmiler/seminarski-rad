@@ -2,7 +2,21 @@
   position: fixed;
   box-sizing: border-box;
   bottom: 0;
-  right: 10%;
+  right: 0;
+  left: 0;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0px 10px 10px 10px;
+  white-space: nowrap;
+  resize: none;
+  display: none;
+}
+
+#nameContainer {
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 0;
+  right: 0;
   left: 0;
   border: 1px solid black;
   padding: 10px;
@@ -16,7 +30,7 @@
   border: 1px solid black;
   overflow-y: scroll;
   top: 0;
-  right: 10%;
+  right: 0;
   left: 0;
   bottom: 100px;
   margin: 10px 10px 0px 10px;
@@ -50,12 +64,15 @@
 }
 
 #messageInput,
-#sendButton {
+#sendButton,
+#nameInput,
+#nameButton {
   display: inline-block;
   vertical-align: bottom;
 }
 
-#messageInput {
+#messageInput,
+#nameInput {
   min-height: 50px;
   width: calc(100% - 100px);
   min-width: 100px;
@@ -63,14 +80,15 @@
   resize: none;
 }
 
-#sendButton {
+#sendButton,
+#nameButton {
   height: 50px;
   width: 80px;
   margin-right: 10px;
   margin-left: 5px;
 }
 
-#membersContainer {
+/* #membersContainer {
   position: fixed;
   border: 1px solid black;
   overflow: scroll;
@@ -85,15 +103,14 @@
 #membersList {
   list-style-type: none;
   padding: 5px;
-  text-align: left;
-}
+  text-align: left; 
+}*/
 
-#nameContainer {
+/* #nameContainer {
   position: fixed;
-  top: 0;
+  bottom: 0;
   right: 10px;
   left: 90%;
-  /* bottom: 85%; */
 }
 
 #nameContainer input {
@@ -107,7 +124,7 @@
 
 #nameContainer button {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   width: 100%;
   min-height: 40px;
-}
+} */
