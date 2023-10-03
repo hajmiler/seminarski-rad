@@ -9,7 +9,7 @@ const nameContainer = document.getElementById("nameContainer");
 const messageForm = document.getElementById("messageForm");
 let username;
 
-const drone = new ScaleDrone(CLIENT_ID);
+const drone = new ScaleDrone(CLIENT_ID, { data: { color: getRandomColor() } });
 console.log(drone);
 
 drone.on("open", (error) => {
@@ -118,13 +118,14 @@ function sendMessage(event) {
 function createMessageListElement(message) {
   const { name, text } = message.data;
   const { timestamp } = message;
+  const { color } = message.member.clientData;
   const time = new Date(timestamp * 1000).toLocaleString();
   const messageListElement = document.createElement("li");
   const messageElement = document.createElement("p");
   const timeElement = document.createElement("p");
   messageElement.innerText = `${name}: ${text}`;
   timeElement.innerText = time;
-  // messageElement.style.backgroundColor = color;
+  messageElement.style.backgroundColor = color;
   messageListElement.append(messageElement, timeElement);
   return messageListElement;
 }
