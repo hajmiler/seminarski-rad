@@ -60,6 +60,7 @@ body {
   padding: 10px;
   border-radius: 20% 5% 20% 5%;
   font-size: 18px;
+  color: white;
 }
 
 #messageList li p:nth-child(2) {
